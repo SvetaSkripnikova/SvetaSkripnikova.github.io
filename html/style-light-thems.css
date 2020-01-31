@@ -1,0 +1,49 @@
+
+
+    header>nav>ul{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    header>nav>ul>li{
+        position: relative;
+        list-style: none;
+        display: inline-block;
+        border-bottom: 1px solid black;
+        width: 150px;
+        text-align: center;
+        margin: 2px;
+        transition: 5s;
+        height: 80px;
+        
+    }
+
+    header>nav>ul>li>a{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;   
+    }
+
+    header>nav>ul>li:hover{
+        background: #5c1b1d;
+        transition: .5s;
+        cursor: pointer;     
+    }
+
+    header>nav>ul>li:hover>a{
+        color: wheat;
+        display: block;
+        transition: .5s; 
+    }
+
+    .section{
+        min-height: 90vh;
+        margin: 10px 5px;
+        border: 1px solid black;
+    }
+
+    .section h2{
+        font-size: 56px;
+    }
