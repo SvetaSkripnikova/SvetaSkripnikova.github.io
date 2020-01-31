@@ -1,14 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/StyleLiteTheme.css">
+
     <title>Document</title>
-    <link rel="=styleshit">
 </head>
 <body>
-   
-        
+    <!-- Шапка -->
+    <header>
+        <input id="txt">
+        <input class="txt chek" type="checkbox">
+
+        <nav>
+            <ul>
+               <li><a href="#Section1">section1</a></li>
+               <li><a href="#Section2">section2</a></li>
+               <li><a href="#Section3">section3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Контент-->
+    <div id="content">
+
+        <div id="Section1" class="container">
+            <div class="row">
+            <h2 class="text-center">section1</h2>
+            </div>
+
+            <div class="row"></div>
+        </div>
+
+        <hr/>
+
+        <div id="Section2" class="section">
+            <h2 class="text-center">section2</h2>
+            <div></div>
+        </div>
+
+        <hr/>
+
+        <div id="Section3" class="section">
+            <h2 class="text-center">section3</h2>
+            <div></div>
+        </div>
+
+    </div>
+
+    <!-- Подвал-->
+    <footer>
+        <p class="text-center">&copy;2020 Svetlana Skripnikova</p>
+    </footer>
+
+    <div class="preloader">
+        <div class="container">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            </div>
+
+        </div>>
+
+
+    <!-- Подключения скриптов -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+     crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+     crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+     crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('a[href^="#"').on('click', function() {
+                var href = $(this).attr("href");
+                $("html, body").animate({
+                    scrollTop : $(href).offset().top
+                });
+                return false;
+            });
+        });
+
+//$('css-селектор') 
+//.class
+//#id
+//div > p
+
+/*$('#txt').val('jnjnlkkl');
+
+$(document).on('click','#txt',function(){
+        console.log(this.value);
+    });
+
+var a = {name:'123', age:15};
+    for(const key in a){
+        console.log(`key: ${key},value:${a[key]}`);
+    }
+    function createPerson(){
+        return {name:'',age:0}
+    }
+
+    var a = createPerson();
+    
+    
+//    $('#txt').on('click keypress',function(){
+//        console.log(this.value);
+//    })
+*/
+$('#preloader').show(); 
+    $('header').hide();
+    $('footer').hide();  
+    $('#content').hide(); 
+    $('hr').show(); 
+
+setTimeout(function(){
+    $('#preloader').hide(); 
+    $('header').show();
+    $('footer').show();  
+    $('#content').show(); 
+    $('hr').hide(); 
+
+},3000)
+
+    </script>
 </body>
 </html>
